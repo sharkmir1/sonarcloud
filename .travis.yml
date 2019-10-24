@@ -1,19 +1,19 @@
 matrix:
   include:
-  - language=node_js
+  - language: node_js
   node_js:
   - '10'
   dist: trusty
   addons:
    sonarcloud:
-    organization: sharkmir1
-     token:   
-      secure: "EEYzpbCaWAV3PgVnGIfNeHtfRAONNLiIPTQgjQ8FqjwLVVaCz9Mk2XsB6bnhVeHQc7+TvcpN96z6N0n0fZEMqoTpqVGW+1oBDlrPI6k7WutII3E0Ffo0EG6RTa84lC//EbrXdPizbjAQJ+boR26vOV9RUb4bcX61qSncmCXlLjwd3uvrZRhuID1P//QDodnW8I9D0sUdlWBtNfBUzMlAC5+4YAhCCJ2ScrppP2dN27hV1+Bclt6Tf5hCJwL0odKPaKDmntyADk8V68CrvmUuXaPytDHdvbVTRew9MOLzz+eEu1203mcNSwNedDBp5pQ+E8YTpq8z3T3UDjglh4Eru/t3dKuBUtyr1kYYkC7aLDPzBuNOUWijC3KtO5rkfyPvaYALflOOnlVTLO67sy/VHghUHaA7DSrTLV8hJaQMkU8cH/ErHXhO+Fj1RUQ3MyB1FAkdZWJurd+eEY4b6M4FQEpC5WHDBh8caHiEdxtuyVIZ+Uvk3Xe00FS0wzr32ACR9aHldB3UGpRwYC7w7icDOK0GA3SYDus1vX6aUOqCOz7rebu9oBPrRsxU7kzeKsKsL+I4K3vzmEIM8Yz1eQ4YK97OxPeOkBKg60Qb2IdLQO5gcaeqinAVdRbymsGHbIFhY7bCxqgiSdjY5k5cyXpAaby3qQ21RbVeRv0eA+X7oS4="
+    organization: "sharkmir1"
+    token:   
+     secure: "EEYzpbCaWAV3PgVnGIfNeHtfRAONNLiIPTQgjQ8FqjwLVVaCz9Mk2XsB6bnhVeHQc7+TvcpN96z6N0n0fZEMqoTpqVGW+1oBDlrPI6k7WutII3E0Ffo0EG6RTa84lC//EbrXdPizbjAQJ+boR26vOV9RUb4bcX61qSncmCXlLjwd3uvrZRhuID1P//QDodnW8I9D0sUdlWBtNfBUzMlAC5+4YAhCCJ2ScrppP2dN27hV1+Bclt6Tf5hCJwL0odKPaKDmntyADk8V68CrvmUuXaPytDHdvbVTRew9MOLzz+eEu1203mcNSwNedDBp5pQ+E8YTpq8z3T3UDjglh4Eru/t3dKuBUtyr1kYYkC7aLDPzBuNOUWijC3KtO5rkfyPvaYALflOOnlVTLO67sy/VHghUHaA7DSrTLV8hJaQMkU8cH/ErHXhO+Fj1RUQ3MyB1FAkdZWJurd+eEY4b6M4FQEpC5WHDBh8caHiEdxtuyVIZ+Uvk3Xe00FS0wzr32ACR9aHldB3UGpRwYC7w7icDOK0GA3SYDus1vX6aUOqCOz7rebu9oBPrRsxU7kzeKsKsL+I4K3vzmEIM8Yz1eQ4YK97OxPeOkBKg60Qb2IdLQO5gcaeqinAVdRbymsGHbIFhY7bCxqgiSdjY5k5cyXpAaby3qQ21RbVeRv0eA+X7oS4="
   before_install:
   - cd frontend
   install:
   - yarn install
   script:
-  - "./node_modules/.bin/eslint src"
+  - ./node_modules/.bin/eslint src
   - yarn test --coverage --watchAll=false
   - sonar-scanner
