@@ -9,7 +9,7 @@ matrix:
     sonarcloud:
         organization: "sharkmir1"
         token:
-            secure: "8cc0b468b9d878b4882b5899cd674e310d3eea66"
+            secure: "UjYWKWRZyz6qBLOSjOPBUNH20/68/J3TM/us42fvwNLzyPB0kwGid0fd9mVdbl3ppyPA2P119b4MEAOZ76KsE2RXjrgLCklvFdEFDNAyjnW5M1HBW7Wa6PUEypELswqB+yJy8/Q/+ytXWItQtoM+IsHOJvzi8VNlm1zosQg/Uu04RU33V2+HF+BSquNPbbCTsx3HmemflPtORz2EXD81Z+HiuZofyJgBg6AffJQqAqYM0fcE7gbuAfTeSQGSoxE4a92Y/NJ7zyE3c8jaMhS+WmfEGA2/tBJkN+Nev09SLd5aUbC9ZVabpg44W1rVzGsv1yClPTnjkhGeSvEd0yVKrTRqmi/YuBBj0EzAmGqrn7P2FPxs0+pkcavLFK9s4N8Q9sbjQfZ/OAxeX9Yzc5ZHFZUc1Ufx14RA798ZIxyNcuXxEHSX4YYppSSR6HnVPNGuf1HfnRTzNrrNhkMzim8n3InH2Df8KAFfcVg6ARPiGyuUM7UtDRUzwvVcCSGDWWVEzxapkPOoXZ8lIhEB9VB2svWHaVQwr0azhKm1afFm+0e7wUm6f4Qhefb/8Z8e8DXL2trbTXugpIAKj0XI4H5TUJ4IoloDuaRt6LuLgzaE506KZszNr1uPR4ArZvmhz3AF4IXJiWgwwlINh3XCUcF0OjD5x+ebXAD/aNlcyf3SZpA="
  before_install: # Script to run before install
  - cd frontend
  install: # Script to install required packages
