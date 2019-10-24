@@ -1,23 +1,20 @@
-# project_root/.travis.yml
 matrix:
- include:
- - language: node_js # Your language e.g. node_js, python
- node_js:
- - '10' # node_js version
- dist: trusty
- addons:
+  include:
+  - language=node_js
+  node_js:
+  - '10'
+  dist: trusty
+  addons:
     sonarcloud:
-        organization: "sharkmir1"
-        token:
-            secure: "UjYWKWRZyz6qBLOSjOPBUNH20/68/J3TM/us42fvwNLzyPB0kwGid0fd9mVdbl3ppyPA2P119b4MEAOZ76KsE2RXjrgLCklvFdEFDNAyjnW5M1HBW7Wa6PUEypELswqB+yJy8/Q/+ytXWItQtoM+IsHOJvzi8VNlm1zosQg/Uu04RU33V2+HF+BSquNPbbCTsx3HmemflPtORz2EXD81Z+HiuZofyJgBg6AffJQqAqYM0fcE7gbuAfTeSQGSoxE4a92Y/NJ7zyE3c8jaMhS+WmfEGA2/tBJkN+Nev09SLd5aUbC9ZVabpg44W1rVzGsv1yClPTnjkhGeSvEd0yVKrTRqmi/YuBBj0EzAmGqrn7P2FPxs0+pkcavLFK9s4N8Q9sbjQfZ/OAxeX9Yzc5ZHFZUc1Ufx14RA798ZIxyNcuXxEHSX4YYppSSR6HnVPNGuf1HfnRTzNrrNhkMzim8n3InH2Df8KAFfcVg6ARPiGyuUM7UtDRUzwvVcCSGDWWVEzxapkPOoXZ8lIhEB9VB2svWHaVQwr0azhKm1afFm+0e7wUm6f4Qhefb/8Z8e8DXL2trbTXugpIAKj0XI4H5TUJ4IoloDuaRt6LuLgzaE506KZszNr1uPR4ArZvmhz3AF4IXJiWgwwlINh3XCUcF0OjD5x+ebXAD/aNlcyf3SZpA="
- before_install: # Script to run before install
- - cd frontend
- install: # Script to install required packages
- - yarn install
- script: # Script to test your build
- - ./node_modules/.bin/eslint src
- - yarn test --coverage --watchAll=false
- - sonar-scanner
- # - language: python
- # python: 3.6
- # ...
+      organization: "sharkmir1"
+  before_install:
+  - cd frontend
+  install:
+  - yarn install
+  script:
+  - "./node_modules/.bin/eslint src"
+  - yarn test --coverage --watchAll=false
+  - sonar-scanner
+env:
+  global:
+    secure: "Vt6J7m7bCKWrk+uC1aRQcYxBchZJ5THr9ZV2Djv/no9UDxO4wWbJPia6UeUcbXM5FHr9hGnGDTIkUooGgFxpAZY47igvIRfO/pz7IwrgQoUn1xH3hCtmOKJTsy3IT7DvwbpLOZGvLdO4uc2/EpkZLeUgyzdumIB0OG3vIeHCG5jBtoppRESNi07qeVbpWreOL9LIsm/5ypuB0JvHRXfIo2Fs4jcrXnJ898tEKisnfT4bcGiKlr/3mhu5dZ2b8q28xHXw0zi+bM2OisFviPrT1xGtVTRwovE5+aUpc01YkBCu4hpNUOvFVcUtmXazwO+xCV1AFYQeKVhQU5Oxj1kZYLLHq8GudYVBaRMxO/l/GZsTU6S6RTKndl5cNMMdIdY4ZxwWxTRLjaP1Z+mDwy0jqqgGYfXCzccCVOOXP8Gzmqnwyk2pq+fnzWHgenOX7mdnHXj1Uh0jLO1eF5zACWiviuAPfVEf1lT2rWgqDt0uI6jP3hZuIwi1siFZRI1DaUqlp1kmaOXx/LChGCxr7LwsO0G/7qqFpDFmZJgXOBUuZbfaRscGIIMnvObZ3hl3qd6/455g4EkMXJRZt5JaIO/KwFKseQZA4HWl/F6lpz8Eb+iNM9HC8kjndYeQ45h1qsF5zKksHaTHXs7Bg4pqd8MLndwpbD/fga0TFJd4DjOwpP8="
