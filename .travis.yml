@@ -4,6 +4,12 @@ matrix:
  - language: node_js # Your language e.g. node_js, python
  node_js:
  - '10' # node_js version
+ dist: trusty
+ addons:
+    sonarcloud:
+        organization: "your SonarCloud organization key"
+        token:
+            secure: "encrypted value that you just copied"
  before_install: # Script to run before install
  - cd frontend
  install: # Script to install required packages
@@ -14,3 +20,4 @@ matrix:
  # - language: python
  # python: 3.6
  # ...
+ - sonar-scanner
