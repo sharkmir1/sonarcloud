@@ -5,8 +5,10 @@ matrix:
   - '10'
   dist: trusty
   addons:
-    sonarcloud:
-      organization: "sharkmir1"
+   sonarcloud:
+    organization: sharkmir1
+     token:   
+      secure: "EEYzpbCaWAV3PgVnGIfNeHtfRAONNLiIPTQgjQ8FqjwLVVaCz9Mk2XsB6bnhVeHQc7+TvcpN96z6N0n0fZEMqoTpqVGW+1oBDlrPI6k7WutII3E0Ffo0EG6RTa84lC//EbrXdPizbjAQJ+boR26vOV9RUb4bcX61qSncmCXlLjwd3uvrZRhuID1P//QDodnW8I9D0sUdlWBtNfBUzMlAC5+4YAhCCJ2ScrppP2dN27hV1+Bclt6Tf5hCJwL0odKPaKDmntyADk8V68CrvmUuXaPytDHdvbVTRew9MOLzz+eEu1203mcNSwNedDBp5pQ+E8YTpq8z3T3UDjglh4Eru/t3dKuBUtyr1kYYkC7aLDPzBuNOUWijC3KtO5rkfyPvaYALflOOnlVTLO67sy/VHghUHaA7DSrTLV8hJaQMkU8cH/ErHXhO+Fj1RUQ3MyB1FAkdZWJurd+eEY4b6M4FQEpC5WHDBh8caHiEdxtuyVIZ+Uvk3Xe00FS0wzr32ACR9aHldB3UGpRwYC7w7icDOK0GA3SYDus1vX6aUOqCOz7rebu9oBPrRsxU7kzeKsKsL+I4K3vzmEIM8Yz1eQ4YK97OxPeOkBKg60Qb2IdLQO5gcaeqinAVdRbymsGHbIFhY7bCxqgiSdjY5k5cyXpAaby3qQ21RbVeRv0eA+X7oS4="
   before_install:
   - cd frontend
   install:
@@ -15,6 +17,3 @@ matrix:
   - "./node_modules/.bin/eslint src"
   - yarn test --coverage --watchAll=false
   - sonar-scanner
-env:
-  global:
-    secure: "Vt6J7m7bCKWrk+uC1aRQcYxBchZJ5THr9ZV2Djv/no9UDxO4wWbJPia6UeUcbXM5FHr9hGnGDTIkUooGgFxpAZY47igvIRfO/pz7IwrgQoUn1xH3hCtmOKJTsy3IT7DvwbpLOZGvLdO4uc2/EpkZLeUgyzdumIB0OG3vIeHCG5jBtoppRESNi07qeVbpWreOL9LIsm/5ypuB0JvHRXfIo2Fs4jcrXnJ898tEKisnfT4bcGiKlr/3mhu5dZ2b8q28xHXw0zi+bM2OisFviPrT1xGtVTRwovE5+aUpc01YkBCu4hpNUOvFVcUtmXazwO+xCV1AFYQeKVhQU5Oxj1kZYLLHq8GudYVBaRMxO/l/GZsTU6S6RTKndl5cNMMdIdY4ZxwWxTRLjaP1Z+mDwy0jqqgGYfXCzccCVOOXP8Gzmqnwyk2pq+fnzWHgenOX7mdnHXj1Uh0jLO1eF5zACWiviuAPfVEf1lT2rWgqDt0uI6jP3hZuIwi1siFZRI1DaUqlp1kmaOXx/LChGCxr7LwsO0G/7qqFpDFmZJgXOBUuZbfaRscGIIMnvObZ3hl3qd6/455g4EkMXJRZt5JaIO/KwFKseQZA4HWl/F6lpz8Eb+iNM9HC8kjndYeQ45h1qsF5zKksHaTHXs7Bg4pqd8MLndwpbD/fga0TFJd4DjOwpP8="
