@@ -7,9 +7,9 @@ matrix:
  dist: trusty
  addons:
     sonarcloud:
-        organization: "your SonarCloud organization key"
+        organization: "sharkmir1"
         token:
-            secure: "encrypted value that you just copied"
+            secure: "8cc0b468b9d878b4882b5899cd674e310d3eea66"
  before_install: # Script to run before install
  - cd frontend
  install: # Script to install required packages
